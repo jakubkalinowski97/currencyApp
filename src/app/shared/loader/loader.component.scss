@@ -1,0 +1,29 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    background-color:#ffffff73;
+    z-index:99999;
+    animation: fadeIn 500ms ease-in-out;
+}
+  
+.spinner {
+    position: relative;
+}

@@ -1,0 +1,50 @@
+<mat-tab-group>
+  <mat-tab label="Increase">
+    <ng-template matTabContent>
+      <table mat-table [dataSource]="topFiveDifferencesIncreased" class="mat-elevation-z8">
+        <ng-container matColumnDef="Currency">
+          <th mat-header-cell *matHeaderCellDef> Currency </th>
+          <td mat-cell *matCellDef="let rate"> {{rate.currency}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Difference">
+          <th mat-header-cell *matHeaderCellDef> Difference </th>
+          <td mat-cell *matCellDef="let rate">
+            {{rate.difference}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="Percentage">
+          <th mat-header-cell *matHeaderCellDef> % </th>
+          <td mat-cell *matCellDef="let rate">
+            {{rate.differencePercentage}}
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Decrease">
+    <ng-template matTabContent>
+      <table mat-table [dataSource]="topFiveDifferencesDecreased" class="mat-elevation-z8">
+        <ng-container matColumnDef="Currency">
+          <th mat-header-cell *matHeaderCellDef> Currency </th>
+          <td mat-cell *matCellDef="let rate"> {{rate.currency}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Difference">
+          <th mat-header-cell *matHeaderCellDef> Difference </th>
+          <td mat-cell *matCellDef="let rate">
+            {{rate.difference}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="Percentage">
+          <th mat-header-cell *matHeaderCellDef> % </th>
+          <td mat-cell *matCellDef="let rate">
+            {{rate.differencePercentage}}
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
